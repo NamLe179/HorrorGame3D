@@ -1,5 +1,45 @@
 {
   "dependencies": {
+    "com.autodesk.fbx": {
+      "version": "4.2.1",
+      "depth": 2,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://packages.unity.com"
+    },
+    "com.didimo.sdk.core": {
+      "version": "https://github.com/didimoinc/didimo-digital-human-unity-sdk.git?path=/com.didimo.sdk.core#5.0.1",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.unity.nuget.newtonsoft-json": "2.0.2",
+        "com.unity.render-pipelines.universal": "10.5.0",
+        "com.unity.textmeshpro": "3.0.6",
+        "com.unity.editorcoroutines": "1.0.0",
+        "com.unity.cinemachine": "2.6.11",
+        "com.unity.timeline": "1.6.4"
+      },
+      "hash": "754fafc1ff70bf3eea71cd04f3b24ecbd21e2d8a"
+    },
+    "com.unity.ai.navigation": {
+      "version": "1.1.7",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.modules.ai": "1.0.0"
+      },
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.animation.rigging": {
+      "version": "1.2.1",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.burst": "1.4.1",
+        "com.unity.test-framework": "1.1.24"
+      },
+      "url": "https://packages.unity.com"
+    },
     "com.unity.burst": {
       "version": "1.8.21",
       "depth": 1,
@@ -10,9 +50,25 @@
       },
       "url": "https://packages.unity.com"
     },
+    "com.unity.cinemachine": {
+      "version": "2.10.3",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.test-framework": "1.1.31"
+      },
+      "url": "https://packages.unity.com"
+    },
     "com.unity.collab-proxy": {
       "version": "2.9.3",
       "depth": 0,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.editorcoroutines": {
+      "version": "1.0.0",
+      "depth": 1,
       "source": "registry",
       "dependencies": {},
       "url": "https://packages.unity.com"
@@ -22,6 +78,72 @@
       "depth": 1,
       "source": "registry",
       "dependencies": {},
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.feature.characters-animation": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {
+        "com.unity.animation.rigging": "1.2.1",
+        "com.unity.timeline": "1.7.7",
+        "com.unity.cinemachine": "2.10.3",
+        "com.unity.formats.fbx": "4.2.1"
+      }
+    },
+    "com.unity.feature.cinematic": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {
+        "com.unity.timeline": "1.7.7",
+        "com.unity.sequences": "2.0.1",
+        "com.unity.formats.fbx": "4.2.1",
+        "com.unity.formats.alembic": "2.3.2",
+        "com.unity.cinemachine": "2.10.3",
+        "com.unity.recorder": "4.0.3"
+      }
+    },
+    "com.unity.feature.gameplay-storytelling": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {
+        "com.unity.cinemachine": "2.10.3",
+        "com.unity.timeline": "1.7.7",
+        "com.unity.visualscripting": "1.9.4"
+      }
+    },
+    "com.unity.feature.worldbuilding": {
+      "version": "1.0.1",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {
+        "com.unity.probuilder": "5.2.4",
+        "com.unity.polybrush": "1.1.8",
+        "com.unity.formats.fbx": "4.2.1",
+        "com.unity.terrain-tools": "5.0.6"
+      }
+    },
+    "com.unity.formats.alembic": {
+      "version": "2.3.2",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.timeline": "1.0.0",
+        "com.unity.modules.cloth": "1.0.0",
+        "com.unity.modules.unityanalytics": "1.0.0"
+      },
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.formats.fbx": {
+      "version": "4.2.1",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {
+        "com.autodesk.fbx": "4.2.1",
+        "com.unity.timeline": "1.7.1"
+      },
       "url": "https://packages.unity.com"
     },
     "com.unity.ide.rider": {
@@ -49,11 +171,65 @@
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
+    "com.unity.inputsystem": {
+      "version": "1.14.2",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.modules.uielements": "1.0.0"
+      },
+      "url": "https://packages.unity.com"
+    },
     "com.unity.mathematics": {
       "version": "1.2.6",
       "depth": 1,
       "source": "registry",
       "dependencies": {},
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.nuget.newtonsoft-json": {
+      "version": "3.2.1",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.polybrush": {
+      "version": "1.1.8",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.settings-manager": "2.0.1"
+      },
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.postprocessing": {
+      "version": "3.4.0",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.modules.physics": "1.0.0"
+      },
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.probuilder": {
+      "version": "5.2.4",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.modules.imgui": "1.0.0",
+        "com.unity.modules.physics": "1.0.0",
+        "com.unity.settings-manager": "1.0.3"
+      },
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.recorder": {
+      "version": "4.0.3",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.timeline": "1.0.0"
+      },
       "url": "https://packages.unity.com"
     },
     "com.unity.render-pipelines.core": {
@@ -94,6 +270,25 @@
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
+    "com.unity.sequences": {
+      "version": "2.0.1",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.ugui": "1.0.0",
+        "com.unity.recorder": "2.5.5",
+        "com.unity.timeline": "1.6.3",
+        "com.unity.settings-manager": "1.0.3"
+      },
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.settings-manager": {
+      "version": "2.1.0",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://packages.unity.com"
+    },
     "com.unity.shadergraph": {
       "version": "14.0.12",
       "depth": 1,
@@ -102,6 +297,16 @@
         "com.unity.render-pipelines.core": "14.0.12",
         "com.unity.searcher": "4.9.2"
       }
+    },
+    "com.unity.terrain-tools": {
+      "version": "5.0.6",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.modules.terrain": "1.0.0",
+        "com.unity.modules.terrainphysics": "1.0.0"
+      },
+      "url": "https://packages.unity.com"
     },
     "com.unity.test-framework": {
       "version": "1.1.33",
@@ -115,7 +320,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.textmeshpro": {
-      "version": "3.0.7",
+      "version": "3.0.9",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -145,7 +350,7 @@
       }
     },
     "com.unity.visualscripting": {
-      "version": "1.9.4",
+      "version": "1.9.8",
       "depth": 0,
       "source": "registry",
       "dependencies": {

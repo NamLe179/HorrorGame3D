@@ -1,14 +1,16 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(Collider))]
 public class HidingSpot : MonoBehaviour
 {
 	[Header("Detection Settings")]
-	[SerializeField] private float noiseThreshold = 0.1f; // ngưỡng âm lượng
+	[SerializeField] private float noiseThreshold = 0.02f; // ngưỡng âm lượng
 	[SerializeField] private float checkInterval = 0.2f;  // tần suất kiểm tra (giây)
+	[SerializeField] private float gain = 150f;            // khuếch đại tín hiệu
 
-	[Header("UI Elements")]
+	[Header("UI Elements")]	
 	[SerializeField] private GameObject noiseUIParent; // chứa toàn bộ UI noise bar
 	[SerializeField] private Image noiseFill; // phần fill của thanh noise bar
 	[SerializeField] private float uiSmoothSpeed = 8f; // tốc độ làm mượt
@@ -72,7 +74,6 @@ public class HidingSpot : MonoBehaviour
 				nextCheckTime = Time.time + checkInterval;
 				float volume = GetMicVolume();
 				CurrentVolume = volume;
-				Debug.Log("Âm lượng: " + volume);
 
 				if (volume > noiseThreshold)
 				{
@@ -85,14 +86,23 @@ public class HidingSpot : MonoBehaviour
 			// Làm mượt UI fill bar
 			displayVolume = Mathf.Lerp(displayVolume, CurrentVolume, Time.deltaTime * uiSmoothSpeed);
 			if (noiseFill != null)
-				noiseFill.fillAmount = Mathf.Clamp01(displayVolume * 15f); // nhân lên để rõ hơn
+				noiseFill.fillAmount = Mathf.Clamp01(displayVolume * 100f); // nhân lên để rõ hơn
 		}
 	}
 
 	private void StartMic()
 	{
-		if (micDevice == null) return;
-		micClip = Microphone.Start(micDevice, true, 1, 44100);
+		if (string.IsNullOrEmpty(micDevice)) return;
+
+		Microphone.End(micDevice);
+		micClip = Microphone.Start(micDevice, true, 1, 22050);
+		StartCoroutine(WaitMicReady());
+	}
+
+	private IEnumerator WaitMicReady()
+	{
+		yield return new WaitForSeconds(0.1f);
+		Debug.Log($"🎙️ Mic '{micDevice}' started. Pos={Microphone.GetPosition(micDevice)}");
 	}
 
 	private void StopMic()
@@ -110,20 +120,30 @@ public class HidingSpot : MonoBehaviour
 
 	private float GetMicVolume()
 	{
-		if (micClip == null) return 0f;
+		if (micClip == null || string.IsNullOrEmpty(micDevice))
+			return 0f;
 
-		int sampleSize = 128;
+		int sampleSize = 256;
 		float[] samples = new float[sampleSize];
 		int micPos = Microphone.GetPosition(micDevice) - sampleSize + 1;
+
 		if (micPos < 0) return 0f;
 
-		micClip.GetData(samples, micPos);
+		try
+		{
+			micClip.GetData(samples, micPos);
+		}
+		catch
+		{
+			return 0f;
+		}
 
-		// Tính RMS (Root Mean Square) → cường độ âm
+		// Tính RMS và khuếch đại nhẹ
 		float sum = 0f;
-		foreach (float s in samples)
-			sum += s * s;
+		for (int i = 0; i < sampleSize; i++)
+			sum += samples[i] * samples[i];
 
-		return Mathf.Sqrt(sum / sampleSize);
+		float rms = Mathf.Sqrt(sum / sampleSize);
+		return Mathf.Clamp01(rms * gain); // giữ trong [0,1]
 	}
 }

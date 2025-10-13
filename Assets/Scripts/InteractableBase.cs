@@ -3,7 +3,7 @@
 public abstract class InteractableBase : MonoBehaviour, IInteractable
 {
 	[SerializeField] private string interactionText = "Press E";
-	[SerializeField] private float interactDistance = 3f;
+	[SerializeField] private float interactDistance = 1f;
 
 	protected bool isActive = false; // (mở / tắt)
 

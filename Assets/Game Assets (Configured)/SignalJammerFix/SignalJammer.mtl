@@ -1,0 +1,24 @@
+newmtl Touched_Plastic_Smooth
+map_Kd Plastic-Colour.png
+Kd 1 1 1
+d 1
+
+newmtl Dark_Metal_Marked
+map_Kd Plastic-Roughness.png
+Kd 1 1 1
+d 1
+
+newmtl Plastic_with_scratches
+Kd 0.06769775 0.06769775 0.06769775
+d 1
+
+newmtl High-Gloss_Red_Plastic
+map_Kd Plastic-Normal.png
+Kd 1 0.1179245 0.1179245
+d 1
+
+newmtl Hi-Gloss_Green_Plastic
+map_Kd Plastic-Normal.png
+Kd 0.1201205 1 0
+d 1
+

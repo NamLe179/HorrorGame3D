@@ -1,14 +1,55 @@
 ﻿using UnityEngine;
 
-public abstract class InteractableBase : MonoBehaviour, IInteractable
+namespace HorrorGame3D.Interaction
 {
-	[SerializeField] private string interactionText = "Press E";
-	[SerializeField] private float interactDistance = 1f;
+	public abstract class InteractableBase : MonoBehaviour, IInteractable
+	{
+		[SerializeField] protected KeyData requiredKey; 
 
-	protected bool isActive = false; // (mở / tắt)
+		[SerializeField] protected bool isLocked = false;
 
-	public virtual string GetInteractionText() => interactionText;
-	public virtual float GetInteractDistance() => interactDistance;
+		[SerializeField] protected bool isOpen = false;
 
-	public abstract void Interact(GameObject interactor);
+		private const string INTERACTABLE_LAYER = "Interactable";
+		public abstract void Interact(Transform player);
+		public abstract string GetPromptMessage();
+
+		// Gán layer khi object được khởi tạo
+		protected virtual void Awake()
+		{
+			SetLayerRecursively(gameObject, INTERACTABLE_LAYER);
+		}
+
+
+		public virtual bool CanInteract()
+		{
+			// Nếu object bị khóa nhưng không có chìa → không thể tương tác
+			if (isLocked && requiredKey == null)
+				return false;
+
+			// Nếu có chìa khóa trong inventory (có thể mở rộng sau)
+			return true;
+		}
+
+		
+
+		// 🔧 Hàm tiện ích: gán layer cho object và toàn bộ con của nó
+		private void SetLayerRecursively(GameObject obj, string layerName)
+		{
+			int layer = LayerMask.NameToLayer(layerName);
+
+			if (layer == -1)
+			{
+				Debug.LogWarning($"⚠️ Layer '{layerName}' Not Found! Pls add layer in Project Settings > Tags and Layers.");
+				return;
+			}
+
+			obj.layer = layer;
+
+			foreach (Transform child in obj.transform)
+			{
+				SetLayerRecursively(child.gameObject, layerName);
+			}
+		}
+	}
 }

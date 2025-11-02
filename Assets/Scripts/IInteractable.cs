@@ -1,8 +1,11 @@
 ﻿using UnityEngine;
 
-public interface IInteractable
+namespace HorrorGame3D.Interaction
 {
-	string GetInteractionText();
-	float GetInteractDistance();
-	void Interact(GameObject interactor);
+	public interface IInteractable
+	{
+		bool CanInteract();        
+		void Interact(Transform player);
+		string GetPromptMessage(); 
+	}
 }

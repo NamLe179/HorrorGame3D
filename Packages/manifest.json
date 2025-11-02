@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "com.didimo.sdk.core": "https://github.com/didimoinc/didimo-digital-human-unity-sdk.git?path=/com.didimo.sdk.core#5.0.1",
     "com.unity.collab-proxy": "2.9.3",
     "com.unity.feature.characters-animation": "1.0.0",
     "com.unity.feature.cinematic": "1.0.0",

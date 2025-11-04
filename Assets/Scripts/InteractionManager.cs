@@ -1,39 +1,43 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class InteractionManager : MonoBehaviour
+namespace HorrorGame3D.Interaction
 {
-	[SerializeField] private Camera playerCamera;
-	[SerializeField] private float maxRayDistance = 5f;
-	[SerializeField] private LayerMask interactableLayer;
-	[SerializeField] private Text promptText;
-	[SerializeField] private KeyCode interactKey = KeyCode.E;
-
-	private IInteractable current;
-
-	void Update()
+	public class InteractionManager : MonoBehaviour
 	{
-		Ray ray = playerCamera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
-		if (Physics.Raycast(ray, out RaycastHit hit, maxRayDistance, interactableLayer))
+		[SerializeField] private Camera playerCamera;
+		[SerializeField] private float maxRayDistance = 5f;
+		[SerializeField] private LayerMask interactableLayer;
+		[SerializeField] private Text promptText;
+		[SerializeField] private KeyCode interactKey = KeyCode.E;
+
+		private IInteractable current;
+
+		void Update()
 		{
-			if (hit.collider.TryGetComponent<IInteractable>(out var interactable))
+			Ray ray = playerCamera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
+			if (Physics.Raycast(ray, out RaycastHit hit, maxRayDistance, interactableLayer))
 			{
-				current = interactable;
-				promptText.gameObject.SetActive(true);
-				promptText.text = interactable.GetInteractionText();
+				if (hit.collider.TryGetComponent<IInteractable>(out var interactable))
+				{
+					current = interactable;
+					promptText.gameObject.SetActive(true);
+					promptText.text = interactable.GetPromptMessage();
 
-				if (Input.GetKeyDown(interactKey))
-					interactable.Interact(gameObject);
+					if (Input.GetKeyDown(interactKey))
+						interactable.Interact(transform);
 
-				return;
+					return;
+				}
+			}
+
+			// Nếu không nhìn thấy object tương tác
+			if (current != null)
+			{
+				current = null;
+				promptText.gameObject.SetActive(false);
 			}
 		}
-
-		// Nếu không nhìn thấy object tương tác
-		if (current != null)
-		{
-			current = null;
-			promptText.gameObject.SetActive(false);
-		}
 	}
+
 }

@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using HorrorGame3D.Interaction;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class InteractionManager : MonoBehaviour
@@ -15,7 +16,7 @@ public class InteractionManager : MonoBehaviour
 	{
 		Ray ray = playerCamera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
 		if (Physics.Raycast(ray, out RaycastHit hit, maxRayDistance, interactableLayer))
-		{
+		{   
 			if (hit.collider.TryGetComponent<IInteractable>(out var interactable))
 			{
 				current = interactable;

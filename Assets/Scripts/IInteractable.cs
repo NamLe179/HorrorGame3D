@@ -7,5 +7,7 @@ namespace HorrorGame3D.Interaction
 		bool CanInteract();        
 		void Interact(Transform player);
 		string GetPromptMessage(); 
+		string GetInteractionText();
+		void Interact(GameObject interactor);
 	}
 }

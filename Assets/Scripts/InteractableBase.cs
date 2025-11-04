@@ -51,5 +51,15 @@ namespace HorrorGame3D.Interaction
 				SetLayerRecursively(child.gameObject, layerName);
 			}
 		}
-	}
+
+        public string GetInteractionText()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void Interact(GameObject interactor)
+        {
+            throw new System.NotImplementedException();
+        }
+    }
 }

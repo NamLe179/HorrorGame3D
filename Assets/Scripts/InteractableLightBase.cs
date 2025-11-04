@@ -54,5 +54,15 @@ namespace HorrorGame3D.Interaction
 		{
 			isOpen = !isOpen;
 		}
-	}
+
+        public string GetInteractionText()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void Interact(GameObject interactor)
+        {
+            throw new System.NotImplementedException();
+        }
+    }
 }

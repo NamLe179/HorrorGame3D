@@ -12,13 +12,11 @@
 
 Lưu Ý Về Các File C# Thư Mục Assets/Scripts Chỉnh Sửa Hệ Thống Tương Tác Vật Thể:
 
+* Nhớ Thêm Asset SocketsAndSwitches và thay thế Apartment Asset cũ trong Game Asset bằng Apartment Asset mới( Cả 2 thư mục zip đều trong Apartment Asset( Sau khi sửa code tương tác) trên Driver).
 * Interactable.cs: Interface
 * InteractableBase.cs: Abstract Class
-* InteractableBase.cs: Abstract Class cho các đèn
+* InteractableLightBase.cs: Abstract Class cho các đèn
 * KeyData.cs: Component cho key để nhận diện key yêu cầu của vật thể
 * LampInteract.cs: Component cho các đèn
 * PlayerInteraction.cs: Component cho Player để tương tác
-* Thư mục \_BPS Basic Assets, Apartment Asset: Folder chứa các file C# tương ứng trong Assets\\Game Assets\\Apartment Asset\\Apartment Asset/\_BPS Basic Assets, và Assets\\Game Assets\\Apartment Asset\\Apartment Asset\\Apartment Kit. Trong đó các file C# được để trong folder cùng tên y như model của căn nhà. Bên cạnh đó các file đã được đổi tên vì vậy cần chú ý đọc tên ( để ý chỉ số phụ 1, 2, 3) để coppy paste code đúng file.
-
-
-
+* LightSwitchInteration.cs: Component cho công tắc đèn

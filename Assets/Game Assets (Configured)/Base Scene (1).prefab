@@ -1111,7 +1111,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemOnHand: {fileID: 0}
   equipmentManager: {fileID: 2451942655893149267}
-  usageKey: 323
+  usageKey: 102
 --- !u!4 &1389651246604665909 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1927095934725912877, guid: a9b081014bad86f4a80b60284279d21b, type: 3}

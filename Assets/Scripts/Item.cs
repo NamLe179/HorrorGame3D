@@ -8,7 +8,9 @@ public class Item : MonoBehaviour, IInteractable
     [Header("Item Information")]
     [SerializeField] private string itemName;
     [SerializeField] private Sprite itemSprite;
-    [SerializeField] private string itemDescription;
+    [TextArea] [SerializeField] private string itemDescription;
+    [SerializeField] public ItemOption.ItemType itemType = ItemOption.ItemType.Reuseable; // ⭐ Thêm ItemType
+    [SerializeField] private ItemOption itemOption; // ⭐ Optional: Reference đến ScriptableObject nếu có
     
     [Header("Interaction Settings")]
     [SerializeField] private string collectPrompt = "Press E to collect";
@@ -29,13 +31,24 @@ public class Item : MonoBehaviour, IInteractable
     {
         if (inventoryManager != null)
         {
-            // Thêm item vào inventory
-            inventoryManager.AddItem(itemName, itemSprite);
+            // Tạo ItemOption dynamically nếu chưa có
+            ItemOption option = itemOption;
+            if (option == null)
+            {
+                option = ScriptableObject.CreateInstance<ItemOption>();
+                option.itemName = itemName;
+                option.itemDescription = itemDescription;
+                option.itemSprite = itemSprite;
+                option.itemType = itemType;
+            }
+            
+            // Thêm item vào inventory với đầy đủ thông tin
+            inventoryManager.AddItem(itemName, itemSprite, itemDescription, option);
             
             // Hủy object sau khi thu thập
             Destroy(gameObject);
             
-            Debug.Log($"✅ Collected: {itemName}");
+            Debug.Log($"✅ Collected: {itemName} (Type: {itemType})");
         }
         else
         {

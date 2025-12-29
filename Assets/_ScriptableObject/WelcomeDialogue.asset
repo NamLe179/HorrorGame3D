@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecde55851d96cb546ae7eed0691a6dd7, type: 3}
+  m_Name: WelcomeDialogue
+  m_EditorClassIdentifier: 
+  dialogueLines:
+  - characterName: Aren Mortwell
+    dialogText: "Xin ch\xE0o, t\xF4i l\xE0 Aren Mortwell. T\xF4i \u0111\xE3 g\u1ECDi
+      \u0111i\u1EC7n v\u1EC1 vi\u1EC7c thu\xEA ph\xF2ng nh\u01B0 \u0111\xE3 h\u1EB9n."
+    dialogVoice: {fileID: 8300000, guid: 32be51f3e381b93418d19d8009cb5d44, type: 3}
+  - characterName: "Ch\u1EE7 nh\xE0"
+    dialogText: "\xC0, c\u1EADu \u0111\xE2y r\u1ED3i. M\u1EDDi v\xE0o, m\u1EDDi v\xE0o!
+      Nh\u01B0 ch\xFAng ta \u0111\xE3 trao \u0111\u1ED5i tr\u01B0\u1EDBc \u0111\xF3,
+      h\xF4m nay t\xF4i s\u1EBD b\xE0n giao ph\xF2ng cho c\u1EADu. "
+    dialogVoice: {fileID: 8300000, guid: 551e30c4a3e56d04880b9af6c3b5a5f6, type: 3}
+  - characterName: Aren Mortwell
+    dialogText: "C\u1EA3m \u01A1n \xF4ng. Khu nh\xE0 c\xF3 v\u1EBB kh\xE1 v\u1EAFng
+      v\u1EBB nh\u1EC9, \u1EDF \u0111\xE2y ch\u1EC9 c\xF3 m\xECnh \xF4ng th\xF4i
+      h\u1EA3?"
+    dialogVoice: {fileID: 8300000, guid: e6e3f96bc5bca794398bdcdead94c28e, type: 3}
+  - characterName: "Ch\u1EE7 nh\xE0"
+    dialogText: "Kho\u1EA3ng th\u1EDDi gian tr\u01B0\u1EDBc th\xEC n\u01A1i \u0111\xE2y
+      c\xF2n kh\xE1 \u0111\xF4ng \u0111\xFAc. Nh\u01B0ng g\u1EA7n \u0111\xE2y c\xF3
+      1 v\xE0i tin \u0111\u1ED3n kh\xF4ng hay l\u1EAFm v\u1EC1 khu n\xE0y n\xEAn
+      m\u1ECDi ng\u01B0\u1EDDi h\u1EA7u nh\u01B0 \u0111\u1EC1u tr\u1EA3 ph\xF2ng
+      h\u1EBFt r\u1ED3i. "
+    dialogVoice: {fileID: 8300000, guid: e7456dac29adcdb429dcd3e04fb33d91, type: 3}
+  - characterName: "Ch\u1EE7 nh\xE0"
+    dialogText: "Nh\u01B0ng c\u1EADu y\xEAn t\xE2m, n\u01A1i \u0111\xE2y r\u1EA5t
+      v\u1EC7 sinh v\xE0 an to\xE0n. T\u1EA1i v\xEC c\u0103n chung c\u01B0 n\xE0y
+      ch\u1EC9 c\xF3 duy nh\u1EA5t 1 c\u1EEDa m\xE0 th\xF4i, v\xE0 t\xF4i lu\xF4n
+      tr\u1EF1c \u1EDF \u0111\xE2y, n\xEAn c\u1EADu y\xEAn t\xE2m."
+    dialogVoice: {fileID: 8300000, guid: 78a9b4dae6bfac1498e2d5dd5b8dd487, type: 3}
+  - characterName: Aren Mortwell
+    dialogText: "\u1ED2, b\u1EA3o sao gi\xE1 ph\xF2ng n\u01A1i n\xE0y l\u1EA1i r\u1EBB
+      v\u1EADy."
+    dialogVoice: {fileID: 8300000, guid: ffc8fde47c1b2e241ad4fed0afa75d77, type: 3}
+  - characterName: "Ch\u1EE7 nh\xE0"
+    dialogText: "\u0110\u1EEBng quan t\xE2m v\u1EC1 \u0111i\u1EC1u \u0111\xF3. \u0110\xE2y
+      l\xE0 ch\xECa kh\xF3a ph\xF2ng c\u1EADu. C\u1EADu c\u1EE9 l\xEAn ph\xF2ng \u0111i,
+      c\u1EA7n g\xEC c\u1EE9 n\xF3i v\u1EDBi t\xF4i. "
+    dialogVoice: {fileID: 8300000, guid: b64d896d5365ecb4f94b9530fa0daa82, type: 3}
+  - characterName: "Ch\u1EE7 nh\xE0"
+    dialogText: "Nh\u1EDB \u0111\u1EEBng \u0111i lung tung sang c\xE1c ph\xF2ng kh\xE1c
+      nh\xE9. M\u1ED9t s\u1ED1 ph\xF2ng h\u01A1i b\u1EA9n do kh\xE1ch m\u1EDBi tr\u1EA3
+      n\xEAn t\xF4i ch\u01B0a v\u1EC7 sinh ch\xFAng \u0111\xE2u."
+    dialogVoice: {fileID: 8300000, guid: ba19d594072182844b850c9e54a769a1, type: 3}
+  - characterName: Aren Mortwell
+    dialogText: "\u01A0 \xF4ng qu\xEAn ch\u01B0a n\xF3i cho t\xF4i bi\u1EBFt t\xF4i
+      \u1EDF ph\xF2ng bao nhi\xEAu r\u1ED3i."
+    dialogVoice: {fileID: 8300000, guid: d8b81e03700af704d9b566c7e02c5901, type: 3}
+  - characterName: "Ch\u1EE7 nh\xE0"
+    dialogText: "\xC0, d\u1EA1o n\xE0y t\xF4i h\u01A1i \u0111\xE3ng tr\xED, ph\xF2ng
+      c\u1EE7a c\u1EADu n\u1EB1m \u1EDF t\u1EA7ng 3, ph\xF2ng 302 nh\xE9. "
+    dialogVoice: {fileID: 8300000, guid: 3f1f5fe177821d345a6e5d19ee8ed370, type: 3}

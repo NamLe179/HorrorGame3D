@@ -64,6 +64,11 @@ ExportedObj/
 *.pdb.meta
 *.mdb.meta
 
+# Bỏ qua file model và texture nặng
+*.fbx
+*.tif
+*.psd
+
 # Unity3D generated file on crash reports
 sysinfo.txt
 

@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecde55851d96cb546ae7eed0691a6dd7, type: 3}
+  m_Name: MainDoorUnlocked
+  m_EditorClassIdentifier: 
+  dialogueLines:
+  - characterName: Aren Mortwell
+    dialogText: "Haha \u0111\xFAng l\xE0 ch\xECa kh\xF3a c\u1EEDa ch\xEDnh th\u1EADt
+      n\xE0y ch\u1EA1y \u0111i b\xE1o c\u1EA3nh s\xE1t th\xF4i"
+    dialogVoice: {fileID: 8300000, guid: a593ad6ef691db84692ff4b922e6ad64, type: 3}

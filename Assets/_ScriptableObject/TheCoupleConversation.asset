@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecde55851d96cb546ae7eed0691a6dd7, type: 3}
+  m_Name: TheCoupleConversation
+  m_EditorClassIdentifier: 
+  dialogueLines:
+  - characterName: "Ng\u01B0\u1EDDi \u0111\xE0n \xF4ng"
+    dialogText: "C\xF2n qu\xEAn g\xEC kh\xF4ng?"
+    dialogVoice: {fileID: 8300000, guid: d0cef1d9565bbe84193c9ffae526c0c1, type: 3}
+  - characterName: "Ng\u01B0\u1EDDi ph\u1EE5 n\u1EEF"
+    dialogText: "Kh\xF4ng, \u0111i nhanh th\xF4i anh. "
+    dialogVoice: {fileID: 8300000, guid: 363647e2cb60f8048a05c78e52cfc5b2, type: 3}
+  - characterName: "Ng\u01B0\u1EDDi \u0111\xE0n \xF4ng"
+    dialogText: "T\u1EA1i sao em l\u1EA1i c\u1EE9 nh\u1EA5t quy\u1EBFt \u0111\xF2i
+      \u0111i g\u1EA5p g\xE1p nh\u01B0 v\u1EADy?"
+    dialogVoice: {fileID: 8300000, guid: 8bcc54a28d822e44f8479c2df2a40209, type: 3}
+  - characterName: "Ng\u01B0\u1EDDi ph\u1EE5 n\u1EEF"
+    dialogText: "Anh bi\u1EBFt ch\u1ECB h\xE0ng x\xF3m ph\xF2ng \u0111\u1ED1i di\u1EC7n
+      m\xE0 em hay gh\xE9 qua ch\u01A1i kh\xF4ng. Em r\u1EA5t th\xE2n v\u1EDBi ch\u1ECB
+      \u1EA5y. Em kh\xF4ng tin l\xE0 ch\u1ECB \u1EA5y chuy\u1EC3n \u0111i m\xE0 kh\xF4ng
+      n\xF3i g\xEC v\u1EDBi em nh\u01B0 th\u1EBF c\u1EA3."
+    dialogVoice: {fileID: 8300000, guid: 6289189bd3975e048a6e6ada697c1cac, type: 3}
+  - characterName: "Ng\u01B0\u1EDDi \u0111\xE0n \xF4ng"
+    dialogText: "Bi\u1EBFt \u0111\xE2u c\xF4 \u1EA5y c\xF3 chuy\u1EC7n g\xEC \u0111\u1ED9t
+      xu\u1EA5t n\xEAn \u0111i th\xF4i, em \u0111ang ph\u1EA3n \u1EE9ng h\u01A1i
+      th\xE1i qu\xE1 r\u1ED3i \u0111\u1EA5y."
+    dialogVoice: {fileID: 8300000, guid: 979c296588da6b543b0753f24cbcf43c, type: 3}
+  - characterName: "Ng\u01B0\u1EDDi ph\u1EE5 n\u1EEF"
+    dialogText: "C\xE1i n\xE0y... \u0110\u01B0\u1EE3c r\u1ED3i, em c\u0169ng ch\u01B0a
+      mu\u1ED1n k\u1EC3 cho anh nghe \u0111\xE2u v\xEC em kh\xF4ng c\u1EA3m th\u1EA5y
+      an to\xE0n cho l\u1EAFm, nh\u01B0ng c\xF3 v\u1EBB kh\xF4ng k\u1EC3 th\xEC kh\xF4ng
+      \u0111\u01B0\u1EE3c nh\u1EC9?"
+    dialogVoice: {fileID: 8300000, guid: ec48a694c93eeea4fa2d7259f87ec2a7, type: 3}
+  - characterName: "Ng\u01B0\u1EDDi ph\u1EE5 n\u1EEF"
+    dialogText: "M\u1EA5y h\xF4m tr\u01B0\u1EDBc, tr\u01B0\u1EDBc khi m\xE0 ch\u1ECB
+      h\xE0ng x\xF3m bi\u1EBFn m\u1EA5t \xFD, em c\xF3 nghe th\u1EA5y 1 s\u1ED1 \xE2m
+      thanh l\u1EA1 \u1EDF ph\xF2ng ch\u1ECB \u1EA5y v\xE0o ban \u0111\xEAm. "
+    dialogVoice: {fileID: 8300000, guid: 5421479b267fe0c4faf0fea1edd5d544, type: 3}
+  - characterName: "Ng\u01B0\u1EDDi ph\u1EE5 n\u1EEF"
+    dialogText: "\u0110\xEAm \u1EA5y em h\u01A1i kh\xF3 ng\u1EE7 n\xEAn \u0111\u1ECBnh
+      ra ngo\xE0i \u0111i d\u1EA1o th\xEC nghe th\u1EA5y ti\u1EBFng \u0111\u1ED9ng
+      nh\u01B0 ai \u0111ang ch\u1EB7t th\u1ECBt \xFD. Tr\u01B0\u1EDBc \u0111\u1EA5y
+      c\xF2n c\xF3 1 \xEDt \xE2m thanh r\xEAn r\u1EC9 n\u1EEFa c\u01A1."
+    dialogVoice: {fileID: 8300000, guid: 64c7722b707318a40a26ae5ceb410b72, type: 3}
+  - characterName: "Ng\u01B0\u1EDDi ph\u1EE5 n\u1EEF"
+    dialogText: "Em c\u1EA3m th\u1EA5y h\u01A1i s\u1EE3 h\xE3i n\xEAn v\xE0o l\u1EA1i
+      ph\xF2ng, xong h\xF4m sau em c\xF3 sang ph\xF2ng ch\u1ECB \u1EA5y th\xEC kh\xF4ng
+      th\u1EA5y ai c\u1EA3, c\xF3 m\u1ED7i ch\u1EE7 nh\xE0 \u0111ang d\u1ECDn \u0111\u1ED3
+      v\xE0 b\u1EA3o ch\u1ECB \u1EA5y chuy\u1EC3n \u0111i \u0111\u1ED9t xu\u1EA5t
+      th\xF4i."
+    dialogVoice: {fileID: 8300000, guid: c871fa5ebcbef2041961404eab502da3, type: 3}
+  - characterName: "Ng\u01B0\u1EDDi ph\u1EE5 n\u1EEF"
+    dialogText: "M\u1ED9t s\u1ED1 ph\xF2ng kh\xE1c c\u0169ng chuy\u1EC3n \u0111i
+      g\u1EA5p th\u1EBF, em kh\xF4ng tin \u0111\u1EA5y l\xE0 tr\xF9ng h\u1EE3p."
+    dialogVoice: {fileID: 8300000, guid: 95895f0c5558f2e4991aabebebd62ec9, type: 3}
+  - characterName: "Ng\u01B0\u1EDDi ph\u1EE5 n\u1EEF"
+    dialogText: "Th\xF4i \u0111i lu\xF4n \u0111i anh, n\xE3y em th\u1EA5y ch\u1EE7
+      nh\xE0 \u0111i ra ngo\xE0i r\u1ED3i, m\xECnh \u0111i lu\xF4n cho l\xE0nh."
+    dialogVoice: {fileID: 8300000, guid: b8376f1fcf59ad94087946d23aad2bad, type: 3}

@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecde55851d96cb546ae7eed0691a6dd7, type: 3}
+  m_Name: PickUpImagePart2
+  m_EditorClassIdentifier: 
+  dialogueLines:
+  - characterName: Aren Mortwell
+    dialogText: "\u1ED2, c\xF3 v\u1EBB nh\u1EEFng m\u1EA3nh n\xE0y c\xF3 th\u1EC3
+      gh\xE9p c\xF9ng v\u1EDBi nh\u1EEFng m\u1EA3nh v\u1EEBa n\xE3y, kh\xF4ng bi\u1EBFt
+      c\xF2n bao nhi\xEAu t\u1EA5m n\u1EEFa nh\u1EC9, m\xECnh c\u1EA7n 1 khung \u1EA3nh
+      \u0111\u1EC3 gh\xE9p cho ch\xEDnh x\xE1c."
+    dialogVoice: {fileID: 8300000, guid: 8d771b3034660c449b99eda5dffdd8ca, type: 3}
